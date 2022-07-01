@@ -1,35 +1,11 @@
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Box, Chip, IconButton, Typography } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
+import useScroll from "../hooks/useScroll";
 
 const Filter= ()=>{
     const divRef = useRef();
-    const [start,setStart] = useState(false);
-    const [end,setEnd] = useState(false);
-    function updateSliderState(){
-        if(divRef.current.scrollLeft===0){
-            setStart(true);
-            setEnd(false);
-        }else if(divRef.current.scrollLeft===divRef.current.scrollWidth-divRef.current.clientWidth){
-            setEnd(true);
-            setStart(false);
-        }else{
-            setEnd(false);
-            setStart(false);
-        }
-    }
-    useEffect(()=>{
-        updateSliderState();
-    },[])
-    function moveRight(){
-        divRef.current.scrollLeft -= 160;
-        updateSliderState();
-    }
-    function moveLeft(){
-        divRef.current.scrollLeft += 160;
-        updateSliderState();
-    }
-
+    const {start,end,moveLeft,moveRight} = useScroll({ref:divRef,amount:160});
     const filters=[
         "All",
         "Mixes",
