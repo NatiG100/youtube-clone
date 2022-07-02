@@ -30,9 +30,9 @@ const Filter= ()=>{
         "New to you",
     ]
     return(
-        <Box width="100%" position="relative" height="max-content" overflow="hidden">
+        <Box  width="100%" position="relative" height="max-content" overflow="hidden" >
             {!start&&<Slider direction="left" onClick={moveRight}/>}
-            <Box className="hide-scroll" ref={divRef}  width={"100%"} display="flex" overflow={"auto"} gap="1%" py={2} px={4} borderTop="1px solid #393939" borderBottom={"1px solid #393939"} sx={{backgroundColor:"#202020",scrollbarWidth:"none"}}>
+            <Box ref={divRef}   className="hide-scroll" width={"100%"} display="flex" overflow={"auto"} gap="1%" py={2}  px={4} borderTop="1px solid #393939" borderBottom={"1px solid #393939"} sx={{backgroundColor:"#202020",scrollbarWidth:"none"}}>
                 {filters.map((item,index)=>(
                     <Chip key={index} label={item} onClick={()=>{}}  sx={{border:"1px solid #555555",fontSize:"14px",fontWeight:"600",color:"#dadada",backgroundColor:"#323232"}}/>
                 ))}
