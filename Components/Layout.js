@@ -11,7 +11,7 @@ const Layout = ({searchQuery="",setSearchQuery=()=>{},children})=>{
             width="100%" 
             display="grid" 
             gridTemplateRows={"max-content 1fr"} 
-            sx={{backgroundColor:"red"}}
+            sx={{backgroundColor:"#292929"}}
         >
             <Navbar 
                 sx={{
@@ -32,19 +32,11 @@ const Layout = ({searchQuery="",setSearchQuery=()=>{},children})=>{
                 gridTemplateRows={"1fr"} 
                 width="100%" 
             >
-                <Box height="100%" overflow={"auto"} sx={{paddingTop:"56px"}}>
+                <Box height="100%" overflow={"auto"} sx={{paddingTop:"56px"}} className="drawer">
                     <DrawerMenu/>
                 </Box>
                 {/* <h1>laksjdf</h1> */}
-                <Box 
-                    height="100%" 
-                    width="100%"  
-                    display="grid" 
-                    gridTemplateRows={"max-content 1fr"}
-                >
-                    <Filter/>
-                    {children}
-                </Box>
+                {children}
             </Box>
         </Box>
     );

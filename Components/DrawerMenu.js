@@ -219,22 +219,25 @@ const DrawerMenu = ()=>{
         setShowMoreSubscriptions((state)=>(!state))
     }
     return(
-            <List sx={{
-                width:"240px",
-                py:"0px",
-                background:"#202020",
-                height:"100%",
-                pt:1.5,
-                "&& .Mui-selected": {
-                    bgcolor: "#fff2",
-                },
-                "&& .Mui-selected:hover":{
-                    bgcolor: "#ffffff38"
-                },
-                overflow:"auto",
-                postion:"sticky",
-                top:"0px"
-              }}>
+            <List 
+            
+                sx={{
+                    width:"240px",
+                    py:"0px",
+                    background:"#202020",
+                    height:"100%",
+                    pt:1.5,
+                    "&& .Mui-selected": {
+                        bgcolor: "#fff2",
+                    },
+                    "&& .Mui-selected:hover":{
+                        bgcolor: "#ffffff38"
+                    },
+                    overflow:"auto",
+                    postion:"sticky",
+                    top:"0px"
+                }}
+            >
                 {categoryMenu.map((menu)=>(
                     <ListItemButton selected={menu.selected} onClick={menu.onClick} sx={{py:"5px"}} key={menu.id}>    
                         <ListItemIcon sx={{mr:"-9px"}}>

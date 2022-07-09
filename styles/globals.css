@@ -19,3 +19,20 @@ a {
 .hide-scroll::-webkit-scrollbar {
   display: none;
 }
+::-webkit-scrollbar{
+  width:17px;
+}
+::-webkit-scrollbar-track{
+  background:#202020;
+  
+}
+::-webkit-scrollbar-thumb{
+  border-radius:8px;
+  background:#8880;
+  border-right: 4px #202020 solid;
+  border-left: 4px #202020 solid;
+  background-clip: padding-box;
+}
+.drawer:hover > ::-webkit-scrollbar-thumb{
+  background:#888;
+}
