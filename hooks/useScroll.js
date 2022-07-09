@@ -22,7 +22,6 @@ const useScroll = ({ref=null,amount=100})=>{
     useEffect(()=>{
         ref.current.addEventListener('scroll',listenForScrollChange)
         updateSliderState();
-        return ()=>{ref.current.removeEventListener('scroll',listenForScrollChange)}
     },[updateSliderState,listenForScrollChange,ref])
     function moveRight(){
         ref.current.scrollLeft -= amount;

@@ -11,7 +11,7 @@ export default function Home() {
         display="grid" 
         gridTemplateRows={"max-content 1fr"}
         sx={{
-          backgroundColor:"#292929",
+          backgroundColor:"#181818",
         }}
         pt="56px"
     >
