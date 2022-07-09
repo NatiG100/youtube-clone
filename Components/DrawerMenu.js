@@ -225,7 +225,7 @@ const DrawerMenu = ()=>{
                     width:"240px",
                     py:"0px",
                     background:"#202020",
-                    height:"100%",
+                    height:"100vh",
                     pt:1.5,
                     "&& .Mui-selected": {
                         bgcolor: "#fff2",
@@ -234,7 +234,7 @@ const DrawerMenu = ()=>{
                         bgcolor: "#ffffff38"
                     },
                     overflow:"auto",
-                    postion:"sticky",
+                    postion:"fixed",
                     top:"0px"
                 }}
             >
