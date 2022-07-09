@@ -1,10 +1,12 @@
-import { Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <Typography>This is the home page</Typography>
+    <Box height="100%" >
+      <Typography >This is the home page</Typography>
+    </Box>
   )
 }

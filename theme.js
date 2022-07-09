@@ -6,4 +6,13 @@ export const darkTheme = createTheme({
             paper:"#202020"
         }
     },
+    components:{
+        MuiListItemIcon:{
+            defaultProps:{
+                sx:{
+                    mr:"-9px",
+                }
+            }
+        }
+    },
 });

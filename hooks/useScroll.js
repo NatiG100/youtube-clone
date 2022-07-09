@@ -5,15 +5,12 @@ const useScroll = ({ref=null,amount=100})=>{
     const [end,setEnd] = useState(false);
     const updateSliderState=useCallback(()=>{
         if(ref.current.scrollLeft===0){
-            console.log("start");
             setStart(true);
             setEnd(false);
-        }else if(Math.ceil(ref.current.scrollLeft)===ref.current.scrollWidth-ref.current.clientWidth){
-            console.log("end");
+        }else if(Math.round(ref.current.scrollLeft)===ref.current.scrollWidth-ref.current.clientWidth){
             setEnd(true);
             setStart(false);
         }else{
-            console.log("neither")
             setEnd(false);
             setStart(false);
         }
