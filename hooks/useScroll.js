@@ -20,7 +20,8 @@ const useScroll = ({ref=null,amount=100})=>{
         updateSliderState();
     },[updateSliderState])
     useEffect(()=>{
-        ref.current.addEventListener('scroll',listenForScrollChange)
+        ref.current.addEventListener('scroll',listenForScrollChange);
+        window.addEventListener('resize',listenForScrollChange);
         updateSliderState();
     },[updateSliderState,listenForScrollChange,ref])
     function moveRight(){

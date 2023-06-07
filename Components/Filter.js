@@ -30,7 +30,17 @@ const Filter= ({borders=true})=>{
         {text:"New to you",selected:false},
     ]
     return(
-        <Box  width="100%" position="relative" height="max-content" overflow="hidden" >
+        <Box  
+            width="100%" 
+            position="sticky" 
+            top="0" 
+            zIndex="1" 
+            right="0" 
+            left="0" 
+            height="max-content" 
+            overflow="hidden" 
+            boxShadow="0px 0px 8px rgba(0,0,0,1)"
+        >
             {!start&&<Slider direction="left" onClick={moveRight}/>}
             <Box 
                 ref={divRef}   

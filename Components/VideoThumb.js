@@ -20,7 +20,8 @@ const VideoThumb = ({thumb,channelAvatar,title,channelName,views,when,duration})
                             left:"0px",
                             width:"100%",
                             height:"100%",
-                            objectFit:"cover"
+                            objectFit:"cover",
+                            boxSizing:"border-box", 
                         }}
                         alt="Thumb"
                     />
