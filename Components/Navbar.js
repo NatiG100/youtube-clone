@@ -2,9 +2,9 @@ import { AppsOutlined, Menu, NotificationsOutlined, VideoCallOutlined } from "@m
 import { AppBar, Avatar, Box, IconButton, TextField } from "@mui/material";
 import Search from "./Search";
 
-const Navbar = ()=>{
+const Navbar = ({sx})=>{
     return(
-        <AppBar position="static" >
+        <AppBar sx={{...sx,boxShadow:"none"}} position="static" >
             <Box display="flex" justifyContent={"space-between"} alignItems="center" py={"8px"} pl={"10px"} pr={"3%"} sx={{backgroundColor:"#202020"}}>
 
             <Box display="flex" justifyContent={"center"} alignItems="center" gap="5%">
